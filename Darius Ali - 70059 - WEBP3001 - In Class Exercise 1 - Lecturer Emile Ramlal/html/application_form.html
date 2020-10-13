@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primary School Application Form</title>
+    <link rel="stylesheet" type="text/css" href="../css/form_style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.3/moment.min.js"></script>
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <script src="../javascript/validateName.js"></script>
+    <script src="../javascript/dateFormatter.js"></script>
+
+    <script src="../javascript/radioValidation.js"></script>
+    
+</head>
+<body>
+    <div class="header">
+        <img src="../images/TT_Coat_of_Arms.jpg" alt="Trinidad and Tobago Coat of Arms" width="150" height="150" class="center_image_header">
+        <h1>Ministry Of Education</h1>
+        <h2>Application For Admission Into A Public Primary School</h2>
+    </div>
+    <div class="row">
+        <div class="col-8 col-s-8 menu">
+            <table>
+                <tr>
+                    <td><a href="../html/index.html">Application form Home Page</a></td>
+                    <td class="active"><a href="../html/application_form.html">Child Info and School Name</a></td>
+                    <td><a href="../html/application_form_family_info_parents.html">Parents/Guardians Family Info</a></td>
+                    <td><a href="../html/application_form_family_info_siblings.html">Sibling Info and Confirmation</a></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="col-5 col-s-6">
+        <form name="childInfo" autocomplete="on" class="childInfo">
+            <fieldset>
+                <legend>Criteria for acceptance</legend>
+                <label>Criteria fro acceptance into Infant Year 1 (as Stated in Circular Memorandum No.2 of 2019):</label>
+                    <ol>
+                        <li>Child must have attained the age of five (5) in the term in which he/she is to be admitted.</li>
+                        <li>Child resides within three (3) Kilometers of the school to which application is made.</li>
+                    </ol>
+            </fieldset>
+            <fieldset>
+                <legend>School Name:</legend>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <label for="School_Name">School Name:</label>&nbsp;&nbsp;&nbsp;
+                <textarea id="School_Name" name="School_Name" rows="1" cols="50" placeholder="California Governmet Primary School" required></textarea>
+            </fieldset>
+            <br>
+            <fieldset class="CI">
+                <legend>Child's Information:</legend>
+                <br>
+                    <fieldset>
+                        <legend>Name and Nationality</legend>
+                        <label for="Sname">Surname:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="text" id="Sname" name="Sname" placeholder="John" required> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <label for="Fname">First Name:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="text" id="Fname" name="Fname" placeholder="Smith" required> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <br>
+                        <br>
+                        <label for="Oname">Other Name(s):</label>
+                        <input type="text" id="Oname" name="Oname" placeholder="Levi"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <label for="Nationality">Nationality:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="text" id="Nationality" name="Nationality" placeholder="Trinidadian/Tobagonian" required>
+                    </fieldset>
+                <br>
+                    <fieldset>
+                        <legend>Date of Birth, Birth Certificate PIN, Sex, Religion</legend>
+                        <label for="DOB">Date Of Birth:</label>
+                        <input type="date" id="DOB" name="DOB" required> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <label for="BC_PIN">Birth Certificate PIN:</label>
+                        <input type="text" id="BC_PIN" name="BC_PIN" pattern="[0-9]{10}" required>
+                        <br>
+                        <br>
+                        <label>Sex:</label> &nbsp;&nbsp;&nbsp;
+                        <label for="Male">Male</label>
+                        <input type="radio" id="Male" name="gender" value="Male"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <label for="Female">Female</label>
+                        <input type="radio" id="Female" name="gender" value="Female"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <label for="Religion">Religion:</label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="text" id="Religion" name="Religion" placeholder="Catholic" required>
+                    </fieldset>         
+                <br>
+                    <fieldset>
+                        <legend>Address, Immunisation, Student Permit</legend>
+                        <br>
+                        <label for="address">Address:</label>
+                        <textarea id="address" name="address" rows="1" cols="50" placeholder="24, John St, McBean, Couva" required></textarea> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <label>Valid Student Permit:</label> &nbsp;&nbsp;&nbsp;&nbsp;
+                        <label for="yes">Yes</label>
+                        <input type="radio" id="yes" name="student_permit" value="yes"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <label for="no">No</label>
+                        <input type="radio" id="no" name="student_permit" value="no">
+                        <br>
+                        <br>
+                        <label>Is your child's immunisation up to date?</label>&nbsp;
+                        <label for="Yes">Yes</label>
+                        <input type="radio" id="Yes" name="immunisation" value="Yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <label for="No">No</label>
+                        <input type="radio" id="No" name="immunisation" value="No">
+                    </fieldset>          
+            </fieldset>
+            <br>
+            <input type="submit" value="Submit" class="submit" onclick="return validateTextInput(), genderRadioValidation(), immunisationRadioValidation()">&nbsp;&nbsp;&nbsp;
+            <input type="reset" value="Reset" class="reset">&nbsp;&nbsp;&nbsp;
+            <button class="next"><a href="../html/application_form_family_info_parents.html">Next</a></button>&nbsp;&nbsp;&nbsp;
+            <button class="previous"><a href="../html/index.html">Previous</a></button>&nbsp;&nbsp;&nbsp;
+            <button onclick="window.print()" class="print">Print</button>
+        </form>
+        
+        <div class="footer">
+            <p>&#169; Darius Ali &nbsp; &nbsp; Student ID: 70059 &nbsp; &nbsp; Email: darius.ali059@we.utt.edu.tt</p>
+            <p>Assignment 2 &nbsp; &nbsp; WEBP3001 &nbsp; &nbsp; Web Programming &nbsp; &nbsp; Lecturer: Emile Ramlal</p>
+        </div>
+    </div>
+</body>
+</html>

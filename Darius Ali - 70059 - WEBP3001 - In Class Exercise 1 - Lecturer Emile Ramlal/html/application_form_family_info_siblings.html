@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primary School Application Form</title>
+    <link rel="stylesheet" type="text/css" href="../css/form_style.css">
+
+    <script src="../javascript/radioValidation.js"></script>
+    <script src="../javascript/validateName.js"></script>
+</head>
+<body>
+    <div class="header">
+        <img src="../images/TT_Coat_of_Arms.jpg" alt="Trinidad and Tobago Coat of Arms" width="150" height="150" class="center_image_header">
+        <h1>Ministry Of Education</h1>
+        <h2>Application For Admission Into A Public Primary School</h2>
+    </div>
+    <div class="row">
+        <div class="col-8 col-s-8 menu">
+            <table>
+                <tr>
+                    <td><a href="../html/index.html">Application form Home Page</a></td>
+                    <td><a href="../html/application_form.html">Child Info and School Name</a></td>
+                    <td><a href="../html/application_form_family_info_parents.html">Parents/Guardians Family Info</a></td>
+                    <td class="active"><a href="../html/application_form_family_info_siblings.html">Sibling Info and Confirmation</a></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="col-5 col-s-6">
+        <form name="siblingInfo" autocomplete="on" class="siblingInfo">
+            <fieldset class="SI">
+                <legend>Sibling Information</legend>
+                <label>Are any siblings currently attending this school?</label>
+                <label for="S_Yes">Yes</label>
+                <input type="radio" id="S_Yes" name="siblings" value="Yes">
+                <label for="S_No">No</label>
+                <input type="radio" id="S_No" name="siblings" value="No">
+                <br>
+                <br>
+                <fieldset>
+                    <legend>Sibling 1</legend>
+                    <label for="S1_Name">Name:</label>
+                    <input type="text" id="S1_Name" name="S1_Name">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <label for="S1_Class">Class:</label>
+                    <input type="text" id="S1_Class" name="S1_Class">
+                </fieldset>
+                <br>
+                    <fieldset>
+                        <legend>Sibling 2</legend>
+                        <label for="S2_Name">Name:</label>
+                        <input type="text" id="S2_Name" name="S2_Name">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <label for="S2_Class">Class:</label>
+                        <input type="text" id="S2_Class" name="S2_Class">
+                    </fieldset>
+                <br>
+                    <fieldset>
+                        <legend>Sibling 3</legend>
+                        <label for="S3_Name">Name:</label>
+                        <input type="text" id="S3_Name" name="S3_Name">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <label for="S3_Class">Class:</label>
+                        <input type="text" id="S3_Class" name="S3_Class">
+                    </fieldset>
+                <br>
+                    <fieldset>
+                        <legend>Sibling 4</legend>
+                        <label for="S4_Name">Name:</label>
+                        <input type="text" id="S4_Name" name="S4_Name">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <label for="S4_Class">Class:</label>
+                        <input type="text" id="S4_Class" name="S4_Class">
+                    </fieldset>
+            </fieldset>
+            <br>
+            <fieldset>
+                <legend>Declaration</legend>
+                <label>I </label>
+                <input type="text" id="parent_name" name="parent_name" placeholder="Parent/Guardian full name" required>
+                <label>,</label>
+                <input type="text" id="relation" name="relation" placeholder="Relation to child" required>  
+                <label>of</label>
+                <input type="text" id="child_name" name="child_name" placeholder="Name of child" required>
+                <label>hereby declare that the information entered is true and correct.</label>
+                <br>
+                <br>
+                    I acknowledge that:
+                    <ul>
+                        <li>A declaration of any false information;</li>
+                        <li>Failure to provide teh documents requested, or</li>
+                        <li>Failure to satisfy the stated criteria for acceptance</li>
+                    </ul>
+                    may disqualify my child from admission to this school.
+            </fieldset>
+            <br>
+            <fieldset>
+                <legend>Circular Memorandum No. 2 of 2019 Admission of Students into Public Primary Schools Amended</legend>
+                <iframe src="../pdf/Circular-Memorandum-No.-2-of-2019-Admission-of-Students-into-Public-Primary-Schools-Amended.pdf" style="width: 900px; height: 400px;"></iframe>
+            </fieldset>
+            <br>
+            <input type="submit" value="Submit" onclick="return siblingRadioValidation(); validateParentInput_Sibling_Page()" class="submit">&nbsp;&nbsp;&nbsp;
+            <input type="reset" value="Reset" class="reset">&nbsp;&nbsp;&nbsp;
+            <button class="previous"><a href="../html/application_form_family_info_parents.html">Previous</a></button>&nbsp;&nbsp;&nbsp;
+            <button onclick="window.print()" class="print">Print</button>
+        </form>
+        <div class="footer">
+            <p>&#169; Darius Ali &nbsp; &nbsp; Student ID: 70059 &nbsp; &nbsp; Email: darius.ali059@we.utt.edu.tt</p>
+            <p>Assignment 2 &nbsp; &nbsp; WEBP3001 &nbsp; &nbsp; Web Programming &nbsp; &nbsp; Lecturer: Emile Ramlal</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primary School Application Form</title>
+    <link rel="stylesheet" type="text/css" href="../css/form_style.css">
+    <script src="../javascript/validateName.js"></script>
+    <script src="../javascript/validateEmail.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/3.1.62/jquery.inputmask.bundle.js"></script>
+
+    <script src="../javascript/phoneFormatter.js"></script>
+</head>
+<body>
+    <div class="header">
+        <img src="../images/TT_Coat_of_Arms.jpg" alt="Trinidad and Tobago Coat of Arms" width="150" height="150" class="center_image_header">
+        <h1>Ministry Of Education</h1>
+        <h2>Application For Admission Into A Public Primary School</h2>
+    </div>
+    <div class="row">
+        <div class="col-8 col-s-8 menu">
+            <table>
+                <tr>
+                    <td><a href="../html/index.html">Application form Home Page</a></td>
+                    <td><a href="../html/application_form.html">Child Info and School Name</a></td>
+                    <td class="active"><a href="../html/application_form_family_info_parents.html">Parents/Guardians Family Info</a></td>
+                    <td><a href="../html/application_form_family_info_siblings.html">Sibling Info and Confirmation</a></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="col-5 col-s-6">
+        <form name="parentInfo" autocomplete="on" class="parentInfo">
+            <fieldset class="PGI">
+                <legend>Family Information</legend>
+                <br>
+                <fieldset>
+                    <legend>Parent 1 / Guardian 1</legend>
+                    <label for="P1_name">Name:</label>
+                    <input type="text" id="P1_name" name="P1_name" placeholder="John Petter Doe" required>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <label for="P1_Relation">Relation to applicant:</label>
+                    <input type="text" id="P1_Relation" name="P1_Relation" placeholder="Mother/Father/etc." required>
+                    <br>
+                    <br>
+                    <label for="P1_email">Email:</label>
+                    <input type="email" id="P1_email" name="P1_email" placeholder="John.Doe@gmail.com" required>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <label for="P1_contact">Contact:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="text" id="P1_contact" name="P1_contact" placeholder="1-868-111-1111" required>
+                    <br>
+                    <br>
+                    <label for="P1_address">Address:</label>
+                    <textarea id="P1_address" name="P1_address" rows="1" cols="50" placeholder="24, John St, McBean, Couva" required></textarea>
+                </fieldset>
+                <br>
+                <fieldset>
+                    <legend>Parent 2 / Guardian 2</legend>
+                    <label for="P2_name">Name:</label>
+                    <input type="text" id="P2_name" name="P2_name" placeholder="Jane Mary Doe">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <label for="P2_Relation">Relation to applicant:</label>
+                    <input type="text" id="P2_Relation" name="P2_Relation" placeholder="Mother/Father/etc.">
+                    <br>
+                    <br>
+                    <label for="P2_email">Email:</label>
+                    <input type="email" id="P2_email" name="P2_email" placeholder="Jane.Doe@gmail.com">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <label for="P2_contact">Contact:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="tel" id="P2_contact" name="P2_contact" placeholder="1-868-111-1111">
+                    <br>
+                    <br>
+                    <label for="P2_address">Address:</label>
+                    <textarea id="P2_address" name="P2_address" rows="1" cols="50" placeholder="24, John St, McBean, Couva"></textarea>
+                </fieldset>
+            </fieldset>
+            <br>
+            <input type="submit" value="Submit" class="submit" onclick="validateParentInput(); validateEmail()">&nbsp;&nbsp;&nbsp;
+            <input type="reset" value="Reset" class="reset">&nbsp;&nbsp;&nbsp;
+            <button class="next"><a href="../html/application_form_family_info_siblings.html">Next</a></button>&nbsp;&nbsp;&nbsp;
+            <button class="previous"><a href="../html/application_form.html">Previous</a></button>&nbsp;&nbsp;&nbsp;
+            <button onclick="window.print()" class="print">Print</button>
+        </form>
+        <div class="footer">
+            <p>&#169; Darius Ali &nbsp; &nbsp; Student ID: 70059 &nbsp; &nbsp; Email: darius.ali059@we.utt.edu.tt</p>
+            <p>Assignment 2 &nbsp; &nbsp; WEBP3001 &nbsp; &nbsp; Web Programming &nbsp; &nbsp; Lecturer: Emile Ramlal</p>
+        </div>
+    </div>
+</body>
+</html>
